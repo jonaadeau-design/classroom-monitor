@@ -2,17 +2,16 @@ const express = require('express');
 const session = require('express-session');
 const path = require('path');
 const mysql = require('mysql2/promise');
-
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 // ==============================================
-// ✅ ONLINE DATABASE — Palitan ang password!
+// ✅ ONLINE DATABASE — Ilagay ang tamang password!
 // ==============================================
 const pool = mysql.createPool({
   host: 'sql209.byetcluster.com',
   user: 'if0_42612322',
-  password: 'ILAGAY_ANG_PASSWORD_MO_DITO', // ⚠️ ILAGAY ANG TUNAY NA PASSWORD MO
+  password: 'YOUR_REAL_PASSWORD_HERE', // ⚠️ PALITAN ITO NG TUNAY NA PASSWORD MO!
   database: 'if0_42612322_classroom_db',
   waitForConnections: true,
   connectionLimit: 10
@@ -42,7 +41,6 @@ function isLoggedIn(req, res, next) {
 }
 
 // ===== ROUTES =====
-
 app.get('/login', (req, res) => {
   if (req.session.userId) return res.redirect('/dashboard');
   res.render('login', { error: null });
