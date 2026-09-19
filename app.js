@@ -6,12 +6,12 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // ==============================================
-// ✅ ONLINE DATABASE — Ilagay ang tamang password!
+// ✅ ONLINE DATABASE — TAMA NA LAHAT!
 // ==============================================
 const pool = mysql.createPool({
-  host: 'sql209.byetcluster.com',
+  host: 'sql209.infinityfree.com',
   user: 'if0_42612322',
-  password: 'Ade123456789, // ⚠️ PALITAN ITO NG TUNAY NA PASSWORD MO!
+  password: 'Classroom2026',
   database: 'if0_42612322_classroom_db',
   waitForConnections: true,
   connectionLimit: 10
