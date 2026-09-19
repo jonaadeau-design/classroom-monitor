@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3000;
 const pool = mysql.createPool({
   host: 'sql209.byetcluster.com',
   user: 'if0_42612322',
-  password: 'Ade123456789', // ⚠️ PALITAN ITO NG TUNAY NA PASSWORD MO!
+  password: 'Ade123456789, // ⚠️ PALITAN ITO NG TUNAY NA PASSWORD MO!
   database: 'if0_42612322_classroom_db',
   waitForConnections: true,
   connectionLimit: 10
